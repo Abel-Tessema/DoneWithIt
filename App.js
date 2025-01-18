@@ -9,15 +9,16 @@ export default function App() {
         flex: 1, // The parent view has to be a flex container as well.
         flexDirection: 'row',
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'center', // Aligns items on each line.
+        alignContent: 'center', // Aligns the container itself as a whole.
+        flexWrap: 'wrap',
       }
     }).container}>
       <View style={StyleSheet.create({
         container: {
           backgroundColor: "dodgerblue",
           width: 100,
-          height: 100,
-          alignSelf: 'flex-start',
+          height: 200,
         }
       }).container}/>
       <View style={StyleSheet.create({
@@ -30,6 +31,20 @@ export default function App() {
       <View style={StyleSheet.create({
         container: {
           backgroundColor: "tomato",
+          width: 100,
+          height: 100,
+        }
+      }).container}/>
+      <View style={StyleSheet.create({
+        container: {
+          backgroundColor: "grey",
+          width: 100,
+          height: 100,
+        }
+      }).container}/>
+      <View style={StyleSheet.create({
+        container: {
+          backgroundColor: "greenyellow",
           width: 100,
           height: 100,
         }
