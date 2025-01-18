@@ -5,7 +5,7 @@ export default function App() {
   return (
     <View style={StyleSheet.create({
       container: {
-        backgroundColor: "white",
+        backgroundColor: 'white',
         flex: 1, // The parent view has to be a flex container as well.
         flexDirection: 'row',
         justifyContent: 'center',
@@ -15,24 +15,9 @@ export default function App() {
     }).container}>
       <View style={StyleSheet.create({
         container: {
-          backgroundColor: "dodgerblue",
-          width: 400,
+          backgroundColor: 'dodgerblue',
+          width: 100,
           height: 100,
-          // flexBasis
-          //    - Sets the size (width or height) in the direction of the main axis.
-          //    - Takes priority (over width or height) regardless of position in the code.
-          //    - Needs reload (on Expo) to take effect.
-          // flexBasis: 100,
-          // flexGrow
-          //    - Takes the available space on the main axis.
-          //    - Same as setting flex.
-          // flexGrow: 1,
-          // flex: 1,
-          // flexShrink
-          //    - Shrink to the available space so that all the others can fit on the line.
-          //    - Same as setting flex to a negative value.
-          // flexShrink: 1,
-          // flex: -1,
         }
       }).container}/>
       <View style={StyleSheet.create({
@@ -40,11 +25,20 @@ export default function App() {
           backgroundColor: "gold",
           width: 100,
           height: 100,
+          top: 20, // Has precedence over bottom.
+          left: 20,
+          // position
+          //    - Default value is 'relative'.
+          //    - 'relative' positions a component relative to its original position (i.e., top: 0, bottom: 0, left: 0,
+          //      right: 0), without affecting other components' layouts.
+          //    - 'absolute' positions a component relative to its parent component, and affects the layout of other
+          //      components.
+          position: 'absolute',
         }
       }).container}/>
       <View style={StyleSheet.create({
         container: {
-          backgroundColor: "tomato",
+          backgroundColor: 'tomato',
           width: 100,
           height: 100,
         }
